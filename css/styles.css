@@ -1,0 +1,15 @@
+.reveal .slides .who-am-i svg {
+  height: 64px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  fill: white;
+}
+
+.reveal .slides .who-am-i svg:hover {
+  fill: green;
+}
+
+.reveal pre code {
+  max-height: none;
+}
