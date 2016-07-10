@@ -1,6 +1,6 @@
 ## Slides
 
-Soon ...
+https://grobim.github.io/formation-angular-extia-101-slides
 
 ## License
 
