@@ -12,6 +12,7 @@
         'Web developpement',
         'Java/Javascript ♥♥♥',
         'Music player',
+        'Science',
         'Video games'
       ]
     };
