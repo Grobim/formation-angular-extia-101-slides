@@ -1,3 +1,22 @@
+body {
+  background-image: url(/images/extia-logo.png);
+  background-repeat: no-repeat;
+  background-size: 15%;
+  background-position: bottom left;
+}
+
+.important {
+  color: orange;
+}
+
+.reveal .slides .name {
+  font-style: italic;
+}
+
+.reveal pre code {
+  max-height: none;
+}
+
 .reveal .slides .who-am-i svg {
   height: 64px;
   background: none;
@@ -10,6 +29,73 @@
   fill: green;
 }
 
-.reveal pre code {
-  max-height: none;
+.reveal .slides .program li.separator {
+  margin-bottom: 30px;
+}
+
+.reveal:not(.overview) .slides .program {
+  zoom: 0.85;
+}
+
+.reveal .slides .angular-history .content {
+  text-align: left;
+}
+
+.reveal .slides .angular-history .titre-version {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.reveal:not(.overview) .slides .angular-history {
+  zoom: 0.9;
+}
+
+.reveal .slides .modules-text ul {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.reveal .slides .modules-text div {
+  width: 65%;
+  display: inline-block;
+}
+
+.reveal:not(.overview) .slides .modules-text {
+  zoom: 0.7;
+}
+
+.reveal .slides .filtres-text ul.filtres-list {
+  width: 39%;
+  display: inline-block;
+}
+
+.reveal .slides .filtres-text div.filtres-list {
+  width: 56%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.reveal:not(.overview) .slides .filtres-text {
+  zoom: 0.9;
+}
+
+.reveal .slides .filtres-code .resultat {
+  text-align: left;
+}
+
+.reveal:not(.overview) .slides .filtres-code {
+  zoom: 0.9;
+}
+
+.reveal .slides .filtres-code-2 .resultat {
+  text-align: left;
+}
+
+.reveal:not(.overview) .slides .services-code {
+  zoom: 0.9;
+}
+
+.reveal:not(.overview) .slides .directives-text {
+  zoom: 0.9;
 }

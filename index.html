@@ -31,7 +31,7 @@
 					<img src="images/AngularJS-Shield-large.png" alt="">
 					<p>By Nicolas CHALET - Extia - Juillet 2016</p>
 				</section>
-        <section class="who-am-i">
+        <section id="who-am-i" class="who-am-i">
           <h2>Qui suis-je ?</h2>
           <pre><code id="detailsTarget" class="javascript hljs" data-trim>
 {
@@ -43,6 +43,7 @@
 	"centerOfInterests" : [
 		'Web developpement',
 		'Java/Javascript ♥♥♥',
+		'Science',
 		'Music player',
 		'Video games'
 	]
@@ -78,10 +79,391 @@
             </a>
           </div>
         </section>
-				<section>Slide 1</section>
+        <section id="who-are-u" class="who-are-u">
+          <h2>Et vous ?</h2>
+          <ul>
+            <li>Qui êtes vous ?</li>
+            <li>Les technos et languages que vous utilisez le plus ? </li>
+            <li>... qui vous attirent le plus ?</li>
+            <li>Où en est-vous avec Angular ?</li>
+          </ul>
+        </section>
+        <section id="program" class="program">
+          <h2>Programme de cette formation</h2>
+          <ul>
+            <li>Pourquoi AngularJS ?</li>
+            <li>Histoire d'AngularJS</li>
+            <li>Pattern MVVM</li>
+            <li class="separator">Two-Way Data-Binding</li>
+            <li class="fragment" data-fragment-index="1">Modules</li>
+            <li class="fragment" data-fragment-index="1">Controller</li>
+            <li class="fragment" data-fragment-index="1">Filtres</li>
+            <li class="fragment" data-fragment-index="1">Factory / Services</li>
+            <li class="fragment" data-fragment-index="1">Provider</li>
+            <li class="fragment" data-fragment-index="1">Directives</li>
+            <li class="fragment" data-fragment-index="1">Components</li>
+            <li class="fragment separator" data-fragment-index="1">Routing</li>
+            <li class="fragment" data-fragment-index="2">Développons tout ça</li>
+          </ul>
+        </section>
+        <section>
+          <section id="why-angular">
+            <h2>Pourquoi AngularJS</h2>
+            <ul>
+              <li>Prise en main rapide et facile</li>
+              <li>
+                Ordre et Structure
+                <ul>
+                  <li>Architeture <span class="important">modulaire</span> (=> <span class="important">Composants</span>)</li>
+                  <li>Évolutions simples</li>
+                  <li>Lisibilité du code</li>
+                  <li>Testabilité</li>
+                </ul>
+              </li>
+              <li>
+                Richesse de sa communauté
+                <ul>
+                  <li>Open-source</li>
+                  <li>185.000 questions sur <a href="http://stackoverflow.com/questions/tagged/angularjs">Stack overflow</a></li>
+                  <li>Beaucoup de <a href="http://ngmodules.org/">resources/modules</a></li>
+                  <li>Popularité <a href="http://www.google.com/trends/explore#q=angularjs&cmpt=q&tz=Etc%2FGMT-1">toujours en hausse</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section id="angular-history" class="angular-history">
+            <h2>Histoire d'AngularJS</h2>
+            <div class="content">
+              <p><a href="https://angularjs.org/" class="titre-version">Angular 1</a></p>
+              <p>
+                <span>Concept apporté par <span class="name">Miško Hevery</span> and <span class="name">Adam Abronsw</span> en <strong class="important">2009</strong></span>
+              </p>
+              <p>
+                <span>Arrivée sur <a href="https://github.com/angular/angular.js">GitHub</a> en <strong class="important">2011</strong></span><br />
+                <span>Première release <strong class="important">1.0.0</strong> en <strong class="important">juin 2012</strong></span>
+              </p>
+              <p>
+                <span>Aujourd'hui version <strong class="important">1.5.7</strong></span><br />
+                <span>> 50.000 étoiles sur <a href="https://github.com/angular/angular.js">GitHub</a></span>
+              </p>
+              <hr />
+              <p><a href="https://angular.io/" class="titre-version">Angular 2</a></p>
+              <p>
+                <span><strong class="important">Release candidate 4</strong> sortie depuis <strong class="important">fin juin 2016</strong></span><br />
+                <span>Presque 14.000 étoiles sur <a href="https://github.com/angular/angular">GitHub</a></span><br />
+                <span>Affaire à suivre ...</span>
+              </p>
+            </div>
+          </section>
+        </section>
+        <section>
+          <section id="mvvm-pattern" class="mvvm-pattern">
+            <h2>Pattern MVVM</h2>
+            <img src="images/MVVM-2.png" alt="" />
+          </section>
+          <section id="two-way-data-binding" class="two-way-data-binding">
+            <h2>Two-Way Data-Binding</h2>
+            <img src="images/Two_Way_Data_Binding.png" alt="" />
+          </section>
+        </section>
+        <section>
+          <section id="components" class="components">
+            <h2>Les différents composants AngularJS</h2>
+            <ul>
+              <li>Module</li>
+              <li>Controller</li>
+              <li>Filtres</li>
+              <li>Factory / Services / Providers</li>
+              <li>Directives</li>
+              <li>Components</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section id="modules-text" class="modules-text">
+            <h2>Les modules</h2>
+            <ul>
+              <li>Un module est un <span class="important">conteneur de composants Angulars</span></li>
+              <li>Le point d'entrée d'une application Angular est un module</li>
+              <li>Il définit <span class="important">ses dépendances</span> aux autres modules</li>
+            </ul>
+            <div>
+              <img src="images/modules.png" alt="" />
+            </div>
+          </section>
+          <section id="modules-lifecycle" class="modules-lifecycle">
+            <h2>Les modules</h2>
+            <h4>Cycle de vie d'un module</h4>
+            <ol>
+              <li>Chargement des dépendances</li>
+              <li>Execution des config blocks</li>
+              <li>Création de l'injecteur</li>
+              <li>Execution des run blocks</li>
+              <li>... puis fait sa vie (création d'un controlleur si on le lui demande, ...)</li>
+            </ol>
+          </section>
+          <section id="modules-code" class="modules-code">
+            <h2>Les modules</h2>
+            <pre><code class="js hljs" data-trim>
+// app.module.js
+angular.module('moduleName', [ // <== Setter, déclaration du module
+  'otherModule'                // <== Et de ses dépendances
+]);
+
+// app.filter.js
+angular.module('moduleName')  // <== Getter, récupération de l'instance'
+.filter('moduleFilter', function ModuleFilter() {
+  // code
+})
+
+// app.controller.js
+angular.module('moduleName')
+.controller('ModuleController', function ModuleController() {
+  // code
+});
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section id="controllers-text" class="controllers-text">
+            <h2>Les controlleurs</h2>
+            <ul>
+              <li>Le controlleur est le lien entre le modèle et la vue</li>
+              <li>Il est la source de confiance de la donnée</li>
+              <li>
+                Il peux être utilisé dans
+                <ul>
+                  <li>une directive</li>
+                  <li>un composant</li>
+                  <li>une route</li>
+                  <li>... des composants d'autres modules ...</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section id="controllers-code" class="controllers-code">
+            <h2>Les controlleurs</h2>
+            <pre><code class="html hljs" data-trim>
+<div ng-controller="ModuleController as moduleCtrl">
+  <input type="text" ng-model="moduleCtrl.firstname" />
+  <span>{{'Hello, ' + moduleCtrl.firstname}}</span>
+  <button ng-click="moduleCtrl.action()">Click me</button>
+</div>
+            </code></pre>
+            <pre><code class="js hljs" data-trim>
+// app.controller.js
+angular.module('moduleName')
+.controller('ModuleController', function ModuleController() {
+  this.firstname = 'Nico';
+  this.action = () => {
+    console.log(this.firstname);
+  };
+});
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section id="filtres-text" class="filtres-text">
+            <h2>Les filtres</h2>
+            <ul>
+              <li>Permet une opération sur un object / une collection / ...</li>
+              <li>Ne modifie pas la donnée d'origine</li>
+              <li>Utilisé principalement pour formatter avant affichage</li>
+              <li>
+                Une bonne tripotée de filtres natifs dans Angular
+                <ul class="filtres-list">
+                  <li>currency</li>
+                  <li>date</li>
+                  <li>filter</li>
+                  <li>json</li>
+                  <li>limitTo</li>
+                  <li>lowercase</li>
+                  <li>number</li>
+                  <li>orderBy</li>
+                  <li>uppercase</li>
+                </ul>
+                <div class="filtres-list">
+                  <pre><code class="html hljs" data-trim>
+<span>{{moduleCtrl.name | uppercase}}</span>
+                  </code></pre>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section id="filtres-code" class="filtres-code">
+            <h2>Les Filtres</h2>
+            <pre><code class="html hljs" data-trim>
+<div ng-controller="ModuleController as moduleCtrl">
+  <span>Formation Angular: {{moduleCtrl.eventDate | date: 'dd/MM/YYYY'}}</span>
+</div>
+            </code></pre>
+            <pre><code class="js hljs" data-trim>
+// app.controller.js
+angular.module('moduleName')
+.controller('ModuleController', function ModuleController() {
+  this.eventDate = '2016-07-11T10:30:00Z';
+});
+            </code></pre>
+            <p class="resultat">
+              <span>Résultat</span>
+            </p>
+            <pre><code class="html hljs" data-trim>
+Formation Angular: 11/07/2016
+            </code></pre>
+          </section>
+          <section id="filtres-code-2" class="filtres-code-2">
+            <h2>Les Filtres</h2>
+            <h4>Créer son propre filtre</h4>
+            <pre><code class="js hljs" data-trim>
+angular.module('moduleName')
+.filter('myUppercase', function() {
+  return function (item) {
+    return item.toUpperCase();
+  }
+})
+.controller('ModuleController', function ModuleController() {
+  this.username = 'Todd Motto';
+});
+            </code></pre>
+            <pre><code class="html hljs" data-trim>
+<div ng-controller="ModuleController as moduleCtrl">
+  <span>User Name: {{moduleCtrl.username | myUppercase}}</span>
+</div>
+            </code></pre>
+            <p class="resultat">
+              <span>Résultat</span>
+            </p>
+            <pre><code class="html hljs" data-trim>
+User Name: TODD MOTTO
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section id="services-text" class="services-text">
+            <h2>Services, factories, providers</h2>
+            <ul>
+              <li>Les Services sont des singletons</li>
+              <li>Les Factories sont des services instanciés à chaque appels</li>
+              <li>Les Providers permettent l'instanciation d'un service, ils sont accessibles à la phase de config</li>
+            </ul>
+          </section>
+          <section id="services-code" class="services-code">
+            <h2>Services, factories, providers</h2>
+            <pre><code class="js hljs" data-trim>
+angular.module('moduleName')
+.service('greetingsService', function() {
+  this.sayHello = function(name) {
+    console.log('Hello, ' + name);
+  };
+})
+.factory('greetingsFactory', function() {
+  return function(name) {
+    var greetName = name || 'Default';
+    return {
+      sayHello = function(aName) {
+        console.log('Hello, ' + aName || greetName);
+      }
+    };
+  };
+})
+.provider('greetings', function() {
+  this.$get = function() {
+    return function() {
+      this.sayHello = function(name) {
+        console.log('Hello, ' + name);
+      };
+    };
+  };
+});
+            </code></pre>
+            <p><a href="http://jsfiddle.net/pkozlowski_opensource/PxdSP/14/">En action</a></p>
+          </section>
+        </section>
+        <section>
+          <section id="directives-text" class="directives-text">
+            <h2>Les Directives</h2>
+            <ul>
+              <li>Elles permettent d'enrichir de DOM</li>
+              <li>Elles permettent de factoriser des éléments graphiques</li>
+              <li>Des éléments très riches peuvent être abstraits par des directives simples</li>
+              <li>
+                Un grand nombre de directives natives
+                <img src="images/building-angularjs-custom-directives-6-638.jpg" alt="" />
+              </li>
+            </ul>
+          </section>
+          <section id="directives-code" class="directives-code">
+            <h2>Les Directives</h2>
+            <h4>La classique : ng-repeat</h4>
+            <p>Controller :</p>
+            <pre><code class="js hljs" data-trim>
+this.items = ['John', 'Peter', 'Bruce'];
+            </code></pre>
+            <p>View :</p>
+            <pre><code class="html hljs" data-trim>
+<ul>
+  <li ng-repeat="item in items">{{item}}</li>
+</ul>
+            </code></pre>
+            <p>Résultat :</p>
+            <ul>
+              <li>John</li>
+              <li>Peter</li>
+              <li>Bruce</li>
+            </ul>
+          </section>
+          <section id="directives-api" class="directives-api">
+            <h2>Les Directives</h2>
+            <h4>Comment en créer ?</h4>
+            <pre><code class="js hljs" data-trim>
+angular.module('moduleName')
+.directive('directiveName', function() {
+  return {
+    restrict     : 'A/E/C', // Attribute, element, className
+    template     : '<div>... html code ...</div>', // Row html
+    templateUrl  : 'some/path/to.html', // Path to a template file
+    scope        : {}, // Attributes to use in the directive
+    link         : function(scope, attr, ele) {}, // bindings
+    controller   : function() {}, // External API
+    controllerAs : 'ctrl'
+  };
+});
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section id="components-text" class="components-text">
+            <h2>Les Components</h2>
+            <ul>
+              <li>S'inspire de la spec Web Component</li>
+              <li>Lifecyclehooks (onInit, onDestroy, ...)</li>
+              <li>Plus simple à migrer en Angular 2</li>
+              <li>Directives avec des propriétés de routing</li>
+            </ul>
+          </section>
+          <section id="components-code" class="components-code">
+            <h2>Les Components</h2>
+            <pre><code class="js hljs" data-trim>
+angular.module('moduleName')
+.component('MyComponent', {
+  template     : '<div>... html code ...</div>', // Row html
+  templateUrl  : 'some/path/to.html', // Path to a template file
+  bindings     : {}, // Attributes to use in the component
+  controller   : function () {}, // bindings
+  controllerAs : 'ctrl'
+});
+            </code></pre>
+          </section>
+        </section>
+          <section id="code" class="code">
+            <h2>Let's Dive in !</h2>
+            <pre><code class="sh hljs" data-trim>
+gulp serve
+            </code></pre>
+            <a href="http://localhost:3000">http://localhost:3000</a>
+          </section>
 			</div>
 		</div>
-
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
 		<script src="lib/js/moment.min.js"></script>

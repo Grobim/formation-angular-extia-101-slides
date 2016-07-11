@@ -124,7 +124,7 @@ module.exports = function(grunt) {
         files: [ 'js/scripts.js' ]
       },
       css: {
-        files: [ 'css/style.css' ]
+        files: [ 'css/styles.css' ]
       },
       livereload: {
         options: {
